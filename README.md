@@ -23,6 +23,12 @@ Or you can have them run automatically as you edit the file:
 $CMD clj -m kaocha.runner --watch
 ```
 
+## How to submit
+
+Please email your answers to
+[eric@purelyfunctional.tv](mailto:eric@purelyfunctional.tv). I'll
+include them in the next newsletter.
+
 ## Subscribe to the newsletter
 
 https://purelyfunctional.tv/newsletter
