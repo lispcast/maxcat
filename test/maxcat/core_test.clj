@@ -20,6 +20,12 @@
       (every? #(>= m (java.math.BigInteger. (apply str %)))
               (combo/permutations ints)))))
 
+(defspec return-greatest-big-size {:max-size 1000}
+  (prop/for-all [ints (gen/tuple gen/pos-int gen/pos-int)]
+    (let [m (sut/maxcat ints)]
+      (every? #(>= m (java.math.BigInteger. (apply str %)))
+              (combo/permutations ints)))))
+
 (deftest return-greatest-with-zeroes
   (is (= 110 (sut/maxcat [10 1]))))
 
