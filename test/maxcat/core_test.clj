@@ -26,9 +26,12 @@
       (every? #(>= m (java.math.BigInteger. (apply str %)))
               (combo/permutations ints)))))
 
+;; from Val
 (deftest return-greatest-with-zeroes
   (is (= 110 (sut/maxcat [10 1]))))
 
 (deftest example-tests
   (is (= 987654321 (sut/maxcat [1 2 3 4 5 6 7 8 9])))
-  (is (= 563419912 (sut/maxcat [12 34 56 199]))))
+  (is (= 563419912 (sut/maxcat [12 34 56 199])))
+  ;; from Steve
+  (is (= 92233720368547758072147483647N (sut/maxcat [Integer/MAX_VALUE Long/MAX_VALUE]))))
